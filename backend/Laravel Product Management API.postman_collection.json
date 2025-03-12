@@ -28,15 +28,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Test User\",\n    \"email\": \"test1@example.com\",\n    \"password\": \"12345678\",\n    \"password_confirmation\": \"12345678\"\n}"
+							"raw": "{\n    \"name\": \"Test User\",\n    \"email\": \"test@example.com\",\n    \"password\": \"12345678\",\n    \"password_confirmation\": \"12345678\"\n}"
 						},
 						"url": {
-							"raw": "{{base_url}}/api/register",
+							"raw": "{{base_url}}/api/v1/register",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
+								"v1",
 								"register"
 							]
 						},
@@ -80,12 +81,13 @@
 							"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"123456\"\n}"
 						},
 						"url": {
-							"raw": "{{base_url}}/api/login",
+							"raw": "{{base_url}}/api/v1/login",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
+								"v1",
 								"login"
 							]
 						},
@@ -129,12 +131,13 @@
 							"raw": "{\n    \"email\": \"user@example.com\",\n    \"password\": \"123456\"\n}"
 						},
 						"url": {
-							"raw": "{{base_url}}/api/login",
+							"raw": "{{base_url}}/api/v1/login",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
+								"v1",
 								"login"
 							]
 						},
@@ -159,12 +162,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{base_url}}/api/logout",
+							"raw": "{{base_url}}/api/v1/logout",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
+								"v1",
 								"logout"
 							]
 						},
@@ -189,12 +193,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{base_url}}/api/profile",
+							"raw": "{{base_url}}/api/v1/profile",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
+								"v1",
 								"profile"
 							]
 						},
@@ -225,12 +230,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{base_url}}/api/admin/dashboard",
+							"raw": "{{base_url}}/api/v1/admin/dashboard",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
+								"v1",
 								"admin",
 								"dashboard"
 							]
@@ -265,12 +271,13 @@
 							"raw": "{\n    \"role\": \"Admin\"\n}"
 						},
 						"url": {
-							"raw": "{{base_url}}/api/users/3/roles",
+							"raw": "{{base_url}}/api/v1/users/3/roles",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
+								"v1",
 								"users",
 								"3",
 								"roles"
@@ -298,19 +305,15 @@
 							}
 						],
 						"url": {
-							"raw": "{{base_url}}/api/products?page=1",
+							"raw": "{{base_url}}/api/v1/products/1",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
-								"products"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "1"
-								}
+								"v1",
+								"products",
+								"1"
 							]
 						},
 						"description": "Get paginated list of products"
@@ -369,12 +372,13 @@
 							"raw": "{\n    \"name\": \"New Product\",\n    \"description\": \"This is a new product description\",\n    \"price\": 199.99,\n    \"stock\": 50\n}"
 						},
 						"url": {
-							"raw": "{{base_url}}/api/products",
+							"raw": "{{base_url}}/api/v1/products",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
+								"v1",
 								"products"
 							]
 						},
@@ -408,12 +412,13 @@
 							"raw": "{\n    \"name\": \"Updated Product Name\",\n    \"price\": 299.99\n}"
 						},
 						"url": {
-							"raw": "{{base_url}}/api/products/1",
+							"raw": "{{base_url}}/api/v1/products/1",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
+								"v1",
 								"products",
 								"1"
 							]
@@ -439,12 +444,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{base_url}}/api/products/1",
+							"raw": "{{base_url}}/api/v1/products/1",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
+								"v1",
 								"products",
 								"1"
 							]
