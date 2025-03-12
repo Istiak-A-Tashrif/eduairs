@@ -1,7 +1,7 @@
 import axios, { InternalAxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL as string,
+  baseURL: `${import.meta.env.VITE_API_URL}/api/v1` as string,
 });
 
 API.interceptors.request.use(

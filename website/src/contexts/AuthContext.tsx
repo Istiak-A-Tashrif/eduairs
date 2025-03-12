@@ -54,7 +54,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const fetchUser = async (): Promise<void> => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/profile`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/profile`);
       setCurrentUser(response.data.user);
       setRoles(response.data.user.roles);
     } catch (error) {
@@ -67,7 +67,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const login = async (email: string, password: string): Promise<any> => {
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}/login`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/login`, {
         email,
         password
       });
@@ -89,7 +89,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     password_confirmation: string
   ): Promise<any> => {
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}/register`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/register`, {
         name,
         email,
         password,
@@ -109,7 +109,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const logout = async (): Promise<void> => {
     if (token) {
       try {
-        await axios.post(`${import.meta.env.VITE_API_URL}/logout`);
+        await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/logout`);
       } catch (error) {
         console.error('Logout error:', error);
       }
